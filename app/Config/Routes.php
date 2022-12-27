@@ -36,7 +36,14 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
-$routes->resource('pegawai');
+// $routes->resource('pegawai');
+$routes->group('api', ['namespace' => 'App\Controllers'], function ($routes) {
+    $routes->get('pegawai', 'Pegawai::index');
+    $routes->post('tambahPegawai', 'Pegawai::create');
+    $routes->get('pegawaiById/(:segment)', 'Pegawai::show/$1');
+    $routes->put('updatePegawai/(:segment)', 'Pegawai::update/$1');
+    $routes->delete('hapusPegawai/(:segment)', 'Pegawai::delete/$1');
+});
 
 /*
  * --------------------------------------------------------------------

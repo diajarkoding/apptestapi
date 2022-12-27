@@ -30,35 +30,16 @@ class Database extends Config
      *
      * @var array
      */
-    // public $default = [
-    //     'DSN'      => '',
-    //     'hostname' => 'localhost',
-    //     'username' => 'postgres',
-    //     'password' => '0987',
-    //     'database' => 'pegawai',
-    //     'DBDriver' => 'postgre',
-    //     'DBPrefix' => '',
-    //     'pConnect' => false,
-    //     'DBDebug'  => (ENVIRONMENT !== 'development'),
-    //     'charset'  => 'utf8',
-    //     'DBCollat' => 'utf8_general_ci',
-    //     'swapPre'  => '',
-    //     'encrypt'  => false,
-    //     'compress' => false,
-    //     'strictOn' => false,
-    //     'failover' => [],
-    //     // 'port'     => 5432,
-    // ];
     public $default = [
         'DSN'      => '',
         'hostname' => 'localhost',
-        'username' => 'root',
-        'password' => '',
+        'username' => 'postgres',
+        'password' => '0987',
         'database' => 'pegawai',
-        'DBDriver' => 'MySQLi',
+        'DBDriver' => 'postgre',
         'DBPrefix' => '',
         'pConnect' => false,
-        'DBDebug'  => (ENVIRONMENT !== 'production'),
+        'DBDebug'  => (ENVIRONMENT !== 'development'),
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
         'swapPre'  => '',
@@ -66,8 +47,27 @@ class Database extends Config
         'compress' => false,
         'strictOn' => false,
         'failover' => [],
-        'port'     => 3306,
+        // 'port'     => 5432,
     ];
+    // public $default = [
+    //     'DSN'      => '',
+    //     'hostname' => 'localhost',
+    //     'username' => 'root',
+    //     'password' => '',
+    //     'database' => 'pegawai',
+    //     'DBDriver' => 'MySQLi',
+    //     'DBPrefix' => '',
+    //     'pConnect' => false,
+    //     'DBDebug'  => (ENVIRONMENT !== 'production'),
+    //     'charset'  => 'utf8',
+    //     'DBCollat' => 'utf8_general_ci',
+    //     'swapPre'  => '',
+    //     'encrypt'  => false,
+    //     'compress' => false,
+    //     'strictOn' => false,
+    //     'failover' => [],
+    //     'port'     => 3306,
+    // ];
 
     /**
      * This database connection is used when
